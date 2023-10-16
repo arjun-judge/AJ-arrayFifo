@@ -119,15 +119,9 @@ public:
 			return (uint32_t)(sizeof(mBuff) / sizeof(T)) - (mReadPtr - mWritePtr);
 	}
 
-	uint32_t getWPtr()
-	{
-		return mWritePtr;
-	}
+	uint32_t getWPtr() { return mWritePtr; }
 
-	uint32_t getRPtr()
-	{
-		return mReadPtr;
-	}
+	uint32_t getRPtr() { return mReadPtr; }
 
 private:
 	T mBuff[FIFO_BUFFER_SIZE] = {};
