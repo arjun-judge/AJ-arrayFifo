@@ -112,11 +112,17 @@ public:
 	uint32_t size()
 	{
 		if (mWritePtr == mReadPtr)
+		{
 			return 0;
-		if (mWritePtr > mReadPtr)
+		}
+		else if (mWritePtr > mReadPtr)
+		{
 			return (mWritePtr - mReadPtr);
+		}
 		else
+		{
 			return (uint32_t)(sizeof(mBuff) / sizeof(T)) - (mReadPtr - mWritePtr);
+		}
 	}
 
 	uint32_t getWPtr() { return mWritePtr; }
