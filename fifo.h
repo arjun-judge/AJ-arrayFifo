@@ -121,7 +121,7 @@ public:
 		}
 		else
 		{
-			return (uint32_t)(sizeof(mBuff) / sizeof(T)) - (mReadPtr - mWritePtr);
+			return FIFO_BUFFER_SIZE - (mReadPtr - mWritePtr);
 		}
 	}
 
