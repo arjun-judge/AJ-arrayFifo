@@ -78,7 +78,7 @@ public:
 
 	T pop_front()
 	{
-		uint32_t val = 0;
+		T val = 0;
 		if (!isEmpty()) // this pointer points to the size member of the object
 		{
 			val = mBuff[mReadPtr];
@@ -89,8 +89,7 @@ public:
 
 	T pop_back()
 	{
-		uint32_t val = 0;
-
+		T val = 0;
 		if (!isEmpty())
 		{
 			decrementWritePointer();
